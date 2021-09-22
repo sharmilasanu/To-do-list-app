@@ -22,6 +22,9 @@ function crossOut() {
 let crossOutButton = $('<crossOutButton></crossOutButton>');
 crossOutButton.append(document.createTextNode('X'));
 li.append(crossOutButton);
+crossOutButton.on("click", function deleteListItem() {
+    li.addClass("delete")
+});
 
 $('#list').sortable();
 }
